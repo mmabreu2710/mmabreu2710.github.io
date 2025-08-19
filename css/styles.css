@@ -300,89 +300,47 @@ h2 {
     flex-wrap: wrap;
 }
 
-/* Contact form container */
-.contact-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Split into two columns */
-    align-items: flex-start; /* Align items at the top */
-    max-width: 800px; /* Limit the form's width */
-    margin: 0 auto; /* Center the form horizontally */
+.contact-container {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 40px 30px;
+    background-color: #1e1e1e; /* subtle contrast from background */
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+    text-align: center;
 }
 
-/* Left fields: Name and Email */
-.left-fields {
-    display: flex;
-    flex-direction: column;
-    margin-right: 70px;
+.contact-container h2 {
+    font-size: 3rem;
+    color: #54ffe8;
+    margin-bottom: 20px;
 }
 
-/* Right field: Message */
-.right-field {
-    display: flex;
-    flex-direction: column;
-    margin-left: 70px;
+.contact-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #f0f0f0;
+    margin-bottom: 30px;
 }
 
-/* Button in the third row */
-.submit-btn-container {
-    grid-column: 1 / -1; /* Span across both columns */
-    text-align: center; /* Center the button */
-    margin-top: 50px;
-}
-
-.contact-form label {
-    font-size: clamp(10px, 5vw, 32px); /* Responsive font size to keep it on one line */
-    font-weight: bold;
-    color: #ffffff;
-    text-align: left;
-}
-
-.contact-form input,
-.contact-form textarea {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-    background-color: #141414;
-    border: 1px solid #333;
-    color: #ffffff;
-}
-
-.contact-form input {
-    padding: 10px;
-    font-size: 16px;
-    
-}
-
-/* Fixed size for the message box (textarea) */
-.contact-form textarea {
-    height: 400px !important;
-    width: 100%;
-    font-size: 16px;
-    padding: 15px; /* Add padding for better readability */
-    resize: none; /* Disable resizing */
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border: 2px solid #54ffe8;
-}
-
-.contact-form button {
+.contact-container .btn {
+    display: inline-block;
     background-color: #54ffe8;
-    color: #1e1e1e;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px;
+    color: #000;
+    padding: 14px 28px;
+    font-weight: 700;
+    font-size: 1rem;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.contact-form button:hover {
-    background-color: #00c9b7;
+.contact-container .btn:hover {
+    background-color: #00d4c7;
+    transform: scale(1.05);
 }
+
 
 .about-section {
     text-align: left !important;
