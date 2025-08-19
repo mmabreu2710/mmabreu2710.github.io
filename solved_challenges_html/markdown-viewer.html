@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Portfolio of Martim Abreu-Markdown Viewer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked@14.1.2/lib/marked.umd.min.js"></script>
+    <link rel="icon" href="../images/logo.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2e2e2e;
+        }
+        #markdown-content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        pre {
+            background-color: #2e2e2e;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div id="markdown-content">Loading content...</div>
+
+    <script>
+        // Function to get query parameters from the URL
+        function getQueryParam(param) {
+            let params = new URLSearchParams(window.location.search);
+            return params.get(param);
+        }
+
+        // Fetch the Markdown file and convert it to HTML
+        function loadMarkdown(file) {
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(markdown => {
+                    console.log('Markdown content fetched:', markdown); // Log the fetched markdown
+                    document.getElementById('markdown-content').innerHTML = marked.parse(markdown); // Use marked.parse()
+                })
+                .catch(error => {
+                    console.error('Error fetching markdown file:', error);
+                    document.getElementById('markdown-content').innerHTML = "<p>Error loading content. Please check the file path or server configuration.</p>";
+                });
+        }
+
+
+        // Get the file parameter from the URL
+        let markdownFile = getQueryParam('file');
+        
+        // If a file parameter is provided, load the markdown file
+        if (markdownFile) {
+            loadMarkdown(markdownFile);
+        } else {
+            document.getElementById('markdown-content').innerHTML = "<p>No file specified.</p>";
+        }
+    </script>
+    <script>
+        console.log('Test markdown conversion:', marked('# Test Heading'));
+    </script>
+</body>
+</html>
