@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Portfolio of Martim Abreu</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+    <body>
+
+        <header>
+            <img src="images/logo.png" alt="Centered Image" class="centered-image">
+        
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                &#9776; <!-- Unicode for the hamburger icon (three stripes) -->
+            </div>
+        
+            <!-- Navigation Menu -->
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About me</a></li>
+                    <li><a href="ctf_challenges_choose.html">CTF Challenges</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="contact.html">Contact me</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+
+            <!-- Skills Section -->
+            <section class="skills-container">
+                <h2>My Skills</h2>
+                <div class="skills-grid">
+                    <!-- Web Exploitation -->
+                    <div class="skill-section">
+                        <h3>Web Exploitation<button class="toggle-btn">+</button></h3>
+                        <div class="skill-content">
+                            <p>Web exploitation involves identifying and leveraging vulnerabilities in web applications. I specialize in securing and testing web applications using various tools and techniques, including:</p>
+                            <ul>
+                                <li><strong>Burp Suite:</strong> Proficient in using Burp Suite for web vulnerability scanning, intercepting traffic, and manual testing for issues like SQL Injection, XSS, and more.</li>
+                                <li><strong>OWASP ZAP:</strong> Skilled in using OWASP ZAP for automating web vulnerability testing and generating reports.</li>
+                                <li><strong>SQLmap:</strong> Adept at utilizing SQLmap for automating SQL injection discovery and exploitation.</li>
+                                <li><strong>DirBuster:</strong> Experienced in brute-forcing directories and file locations on a web server to find hidden vulnerabilities.</li>
+                                <li><strong>BeEF (Browser Exploitation Framework):</strong> Proficient in exploiting browser vulnerabilities using BeEf.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Forensics -->
+                    <div class="skill-section">
+                        <h3>Forensics<button class="toggle-btn">+</button></h3>
+                        <div class="skill-content">
+                            <p>Digital forensics is crucial for gathering evidence and analyzing systems after a cyber incident. My forensics skill set includes:</p>
+                            <ul>
+                                <li><strong>Autopsy:</strong> Competent in using Autopsy for digital forensics investigations, file recovery, and data analysis.</li>
+                                <li><strong>Volatility:</strong> Skilled in using Volatility for memory forensics, analyzing RAM dumps to detect malware and process anomalies.</li>
+                                <li><strong>Wireshark:</strong> Experienced in network packet analysis with Wireshark to identify suspicious network traffic.</li>
+                                <li><strong>zsteg:</strong> Proficient in using zsteg for steganography detection and analysis in files such as images.</li>
+                                <li><strong>Binwalk:</strong> Proficient in extracting embedded files from binary images.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Reverse Engineering -->
+                    <div class="skill-section">
+                        <h3>Reverse Engineering<button class="toggle-btn">+</button></h3>
+                        <div class="skill-content">
+                            <p>Reverse engineering involves deconstructing binaries and software to understand their functionality, identify vulnerabilities, or analyze malware. My reverse engineering skills include:</p>
+                            <ul>
+                                <li><strong>Ghidra:</strong> Proficient in Ghidra for reverse engineering and decompiling code to analyze software internals.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Binary Exploitation -->
+                    <div class="skill-section">
+                        <h3>Binary Exploitation<button class="toggle-btn">+</button></h3>
+                        <div class="skill-content">
+                            <p>Binary exploitation involves identifying vulnerabilities in compiled programs and exploiting them to achieve unintended behavior. My skill set includes:</p>
+                            <ul>
+                                <li><strong>Pwntools:</strong> Proficient in using Pwntools for automating binary exploitation tasks in CTFs.</li>
+                                <li><strong>gdb & GEF:</strong> Skilled in using gdb (GNU Debugger) along with GEF extensions for debugging and analyzing binary crashes.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Programming Languages -->
+                    <div class="skill-section">
+                        <h3>Programming Languages<button class="toggle-btn">+</button></h3>
+                        <div class="skill-content">
+                            <p>As part of my cybersecurity expertise, I am proficient in several programming and scripting languages essential for vulnerability research, exploit development, and automation:</p>
+                            <ul>
+                                <li><strong>Python:</strong> Extensive experience in Python for scripting, automating tasks, and developing security tools and exploits.</li>
+                                <li><strong>Java:</strong> Experienced in object-oriented programming for web and enterprise solutions.</li>
+                                <li><strong>C#:</strong> Skilled in developing applications, especially in the .NET framework.</li>  
+                                <li><strong>C:</strong> Strong knowledge of C for low-level programming, vulnerability analysis, and exploit development.</li>
+                                <li><strong>Bash:</strong> Skilled in Bash scripting for automating tasks in Unix-based environments.</li>
+                                <li><strong>HTML/CSS/JavaScript:</strong> Proficient in these web technologies for web development and analyzing web security vulnerabilities.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Networking and Telecommunications -->
+                    <div class="skill-section">
+                        <h3>Networking and Telecommunications<button class="toggle-btn">+</button></h3>
+                        <div class="skill-content">
+                            <p>My background in networking and telecommunications equips me with the knowledge to analyze, secure, and troubleshoot complex network infrastructures:</p>
+                            <ul>
+                                <li><strong>Wireshark:</strong> Proficient in analyzing network traffic to identify potential threats and vulnerabilities.</li>
+                                <li><strong>Nmap:</strong> Skilled in using Nmap for network discovery and port scanning to identify open services and vulnerabilities.</li>
+                                <li><strong>tcpdump:</strong> Experienced in using tcpdump for capturing and analyzing network packets in real time.</li>
+                                <li><strong>GNS3:</strong> Proficient in emulating, configuring, and troubleshooting networks with GNS3.</li>
+                                <li><strong>Cisco Devices:</strong> Familiar with configuring and troubleshooting Cisco routers and switches as part of networking security.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Languages -->
+                    <div class="skill-section">
+                        <h3>Languages<button class="toggle-btn">+</button></h3>
+                        <div class="skill-content">
+                            <p>I am proficient in multiple languages, which allows me to communicate effectively with international teams and clients:</p>
+                            <ul>
+                                <li><strong>English:</strong> Fluent in English for both technical writing and verbal communication.</li>
+                                <li><strong>Portuguese:</strong> Native proficiency in Portuguese for communication and collaboration in technical projects.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Hobbies -->
+                    <div class="skill-section">
+                        <h3>Hobbies<button class="toggle-btn">+</button></h3>
+                        <div class="skill-content">
+                            <p>Beyond my professional expertise, I am passionate about maintaining an active lifestyle through various sports and activities:</p>
+                            <ul>
+                                <li><strong>Kickboxing:</strong> I have been practicing kickboxing for three years, honing my discipline, focus, and physical endurance. It has not only enhanced my fitness but also taught me the importance of perseverance and strategy in achieving goals.</li>
+                                <li><strong>Basketball:</strong> From fifth grade through my second year of college, I actively participated in competitive basketball. This experience developed my teamwork, leadership, and communication skills, which I apply in both personal and professional settings.</li>
+                                <li><strong>Gym Training:</strong> For the past three years, I have consistently trained in the gym, focusing on strength and conditioning. This routine has instilled a sense of resilience, goal-setting, and self-discipline that reflects in all aspects of my life.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-icons">
+                <a href="https://www.linkedin.com/in/martim-abreu-4b8a29225/" target="_blank">
+                    <img src="images/linkedin.png" alt="LinkedIn" class="icon">
+                </a>
+                <a href="https://github.com/mmabreu2710" target="_blank">
+                    <img src="images/github.png" alt="GitHub" class="icon">
+                </a>
+                <a href="images/Martim_Abreu.pdf" target="_blank">
+                    <img src="images/cv.png" alt="cv" class="icon">
+                </a>
+            </div>
+            <a href="https://www.flaticon.com/free-icons/cybersecurity" title="cybersecurity icons">Cybersecurity icons created by Dewi Sari - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/anonymous" title="anonymous icons">Anonymous icons created by Dewi Sari - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/information" title="information icons">Information icons created by Tanah Basah - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/contact-us" title="contact us icons">Contact us icons created by Mr. GrayCat - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by riajulislam - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Roundicons Premium - Flaticon</a>
+        </footer>
+        <script>
+            function toggleMenu() {
+                const navbar = document.getElementById('navbar');
+                navbar.classList.toggle('active');
+            }
+        </script>
+        <script>
+            document.querySelectorAll('.toggle-btn').forEach(function(button) {
+                button.addEventListener('click', function() {
+                    // Toggle the content display
+                    let content = this.parentElement.nextElementSibling;
+                    content.classList.toggle('open');
+                    
+                    // Toggle the button text between + and -
+                    if (this.textContent === '+') {
+                        this.textContent = '-'; // Change to minus
+                    } else {
+                        this.textContent = '+'; // Change to plus
+                    }
+                });
+            });
+        </script>
+
+    </body>
+</html>

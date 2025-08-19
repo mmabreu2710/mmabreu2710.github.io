@@ -1,0 +1,825 @@
+html, body {
+    height: 100%; /* Ensure the body and html take up full height of the viewport */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* This makes the content area grow to fill available space */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+header {
+    padding: 10px;
+    padding-bottom: 0px; /* Adjust this value to control the padding */
+    background-color: #141414;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between; /* Aligns everything to the left */
+    align-items: center; /* Centers items horizontally */
+}
+
+header h1 {
+    margin: 0;
+    color: #54ffe8; /*previous color #00ff00*/
+}
+
+header img {
+    margin-left: 100px; 
+    max-width: 120px; /* Keeps the logo size fixed */
+    height: auto; /* Ensures the image keeps its aspect ratio */
+}
+
+/* Desktop View (Default) */
+header nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+/* Style for the hamburger menu (push it to the right and make it bigger) */
+.hamburger-menu {
+    display: none; /* Hidden on larger screens */
+    font-size: 40px; /* Make the icon bigger */
+    cursor: pointer;
+    position: absolute;
+    right: 20px; /* Push it further to the right */
+    top: 10px; /* Adjust its vertical position */
+    color: #ffffff; /* Match the color scheme */
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+/* Hide the navbar by default on mobile */
+#navbar {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 25px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size:24px; /* Makes the text larger */
+    font-weight: bold; /* Makes the text bold */
+    font-family: 'Roboto', Arial, sans-serif;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+nav ul li a:hover {
+    color: #54ffe8; /* Change color on hover to match the theme */
+}
+
+/* Added styles for centering the image */
+.centered-image {
+    max-width: 75px; /* Adjust image size */
+    height: auto;
+    margin-bottom: 20px; /* Adds space between the image and navigation */
+}
+
+.container {
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bio {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bio img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 2px solid #54ffe8;
+}
+
+
+.bio-content {
+    /*max-width: 620px;*/
+    margin-right: 20px;
+    margin-top: -40px;
+}
+
+.bio-content p{
+    text-align: justify;
+}
+
+h2 {
+    color: #54ffe8;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    font-size: clamp(24px, 5vw, 80px); /* Responsive font size to keep it on one line */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+
+}
+
+/* Styles for the CTF Challenges title and introductory section */
+.ctf-intro {
+    text-align: center; /* Center the text */
+    margin-bottom: 0px; /* Add some space below the intro */
+    
+}
+
+/* Title for CTF Challenges */
+.ctf-intro h1 {
+    color: #54ffe8;
+    font-size: clamp(24px, 5vw, 80px); /* Same as the 'I AM MARTIM ABREU' title */
+    margin: 0; /* Remove default margins */
+}
+
+/* Introductory text */
+.ctf-intro p {
+    font-size: clamp(6px, 5vw, 20px); /* Match the text within the Web Exploitation, Forensics, etc. sections */
+    
+    margin-left: 20px; 
+    margin-right: 20px; 
+    margin-top: 20px; 
+    margin-bottom: 0px !important; 
+    color: #ffffff; /* Ensure the text color matches the rest of the site */
+    line-height: 1.6; /* Improve readability with line height */
+    text-align: justify; /* Justify the text */
+}
+
+
+.bio-content p {
+    margin-left: 25px;
+    text-indent: 0; /* Ensures no first-line indentation */
+    font-size: clamp(6px, 5vw, 20px); /* Responsive font size to keep it on one line */
+}
+
+/* Grid section styling */
+.grid-section {
+    padding: 50px 0;
+    background-color: #1e1e1e; /* Same background as the rest of the site */
+    padding-top: 5px;
+    padding-left: 100px;
+}
+
+/* Grid container to create 2x2 layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between grid items */
+}
+
+/* Add a line (border) to separate the rows */
+.grid-item {
+    display: flex;
+    position: relative; /* Ensure the pseudo-element is positioned relative to the grid item */
+}
+
+/* Pseudo-element to create the fading line */
+.grid-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Position the line at the bottom */
+    left: 0;
+    width: 100%; /* Make the line span the full width */
+    height: 2px; /* Thickness of the line */
+    background: linear-gradient(to right, transparent, #54ffe8, transparent); /* Gradient for fading effect */
+}
+
+/* Remove the bottom border for the last row 
+.grid-item:nth-last-child(-n+2) {
+    border-bottom: none;
+}*/
+
+
+/* Image in the grid items */
+.grid-image {
+    width: 180px; /* Adjust the size of the image */
+    height: 180px; /* Adjust the height to match width for a perfect circle */
+    object-fit:  contain; /* Ensures the image covers the area without stretching */
+    border: 2px solid #54ffe8; /* Border between image and text */
+    border-radius: 50%; /* Makes the image circular */
+    border: 2px solid #54ffe8; /* Adds border around the circular image */
+    margin: auto; /* Centers the image within its container */
+    overflow: hidden; /* Keeps the image inside the circle */
+}
+
+/* Inner image that you want to zoom out */
+.grid-image img {
+    width: 100%; /* Image should fill the circle */
+    height: 100%;
+    object-fit: contain; /* Ensures the image is contained within the circle */
+}
+
+/* Add a class for zooming out only the image (not the container) */
+.grid-image.zoom-out img {
+    transform: scale(0.85); /* Zoom out the image inside the circle to 80% */
+}
+
+
+
+
+/* Text and button in the grid item */
+.grid-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Aligns the text at the top and button at the bottom */
+    padding: 20px;
+    width: 70%;
+    text-align: justify; /* Justify the text */
+}
+
+.grid-text h3 {
+    align-self: center; /* Align button to the bottom right */
+    color: #ffffff;
+    font-size: clamp(12px, 5vw, 40px); /* Responsive font size to keep it on one line */
+    margin-bottom: 2px;
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+}
+
+.grid-text p {
+    font-size: clamp(6px, 5vw, 20px); /* Responsive font size to keep it on one line */
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.btn {
+    align-self: center; /* Align button to the bottom right */
+    background-color: #54ffe8;
+    color: #1e1e1e;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00c9b7; /* Slightly different hover color */
+}
+
+/* Contact page styles */
+.contact-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.contact-container h2 {
+    font-size: clamp(24px, 5vw, 80px); /* Same as the 'I AM MARTIM ABREU' title */
+    color: #54ffe8;
+    margin-bottom: 20px;
+}
+
+.contact-container p {
+    font-size: clamp(6px, 5vw, 20px); /* Match the text within the challenges */
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+/* Form styles */
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Contact form container */
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Split into two columns */
+    align-items: flex-start; /* Align items at the top */
+    max-width: 800px; /* Limit the form's width */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+/* Left fields: Name and Email */
+.left-fields {
+    display: flex;
+    flex-direction: column;
+    margin-right: 70px;
+}
+
+/* Right field: Message */
+.right-field {
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+}
+
+/* Button in the third row */
+.submit-btn-container {
+    grid-column: 1 / -1; /* Span across both columns */
+    text-align: center; /* Center the button */
+    margin-top: 50px;
+}
+
+.contact-form label {
+    font-size: clamp(10px, 5vw, 32px); /* Responsive font size to keep it on one line */
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: #141414;
+    border: 1px solid #333;
+    color: #ffffff;
+}
+
+.contact-form input {
+    padding: 10px;
+    font-size: 16px;
+    
+}
+
+/* Fixed size for the message box (textarea) */
+.contact-form textarea {
+    height: 400px !important;
+    width: 100%;
+    font-size: 16px;
+    padding: 15px; /* Add padding for better readability */
+    resize: none; /* Disable resizing */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 2px solid #54ffe8;
+}
+
+.contact-form button {
+    background-color: #54ffe8;
+    color: #1e1e1e;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #00c9b7;
+}
+
+.about-section {
+    text-align: left !important;
+    width: 100%; /* Makes sure the section takes full width */
+    padding-left: 0px !important;
+    margin-left: 0px !important;
+}
+
+.about-content {
+    margin-left: 0; /* Align the bio-content to the left */
+    
+}
+
+.about-content p, li {
+    font-size: clamp(6px, 5vw, 20px); /* Match the text within the Web Exploitation, Forensics, etc. sections */
+}
+.about-section p {
+    font-size: clamp(6px, 5vw, 20px); /* Match the text within the Web Exploitation, Forensics, etc. sections */
+}
+
+.about-content h3 {
+    font-size: clamp(9px, 5vw, 30px);
+}
+
+
+.about-section h2 {
+    margin-top: 0px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+
+
+
+.options-container {
+    display: flex;
+    align-items: center; /* Aligns content to the top of the container */
+    justify-content: center; /* Aligns items from the start (left) */
+    gap: 20px; /* Adds space between the image and text */
+    margin-bottom: 30px; /* Adds space below the options section */
+}
+
+.options-image {
+    max-width: 200px; /* Set a max-width for the image */
+    height: auto; /* Maintains the image's aspect ratio */
+    border-radius: 10px; /* Optional: Makes the image's corners rounded */
+    object-fit: cover; /* Ensures the image covers the area without being stretched */
+}
+
+.options-content {
+    margin-left: 40px;
+    flex: 1; /* Allows the text content to take up the remaining space */
+    text-align: left;
+}
+
+.options-content h3 {
+    font-size: clamp(9px, 5vw, 30px);
+    padding-top: 40px;
+    margin-top: 0;
+    color: #ffffff; /* Adjust this to match your theme */
+}
+
+.options-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.options-content li {
+    margin-bottom: 10px; /* Adds space between the list items */
+}
+
+
+
+.skills-container h2{
+    text-align: center;
+}
+
+.skills-container p{
+    margin-left: 20px;
+    font-size: clamp(6px, 5vw, 20px);
+}
+
+.skills-container h3{
+    font-size: clamp(12px, 5vw, 40px);
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+
+
+.resolved-challenges h2 {
+    text-align: center !important;
+    margin: 20px auto !important; /* Centers the h2 and adds space around it */
+}
+
+/* Styling the table */
+.styled-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 1.2em;
+    background-color: #1e1e1e;
+    border: 1px solid #54ffe8;
+}
+
+.styled-table thead tr {
+    background-color: #54ffe8;
+    color: #1e1e1e;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    border: 1px solid #54ffe8;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #54ffe8;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #2b2b2b;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #54ffe8;
+}
+
+/* Styling for links */
+.styled-table a {
+    color: #54ffe8;
+    text-decoration: none;
+}
+
+.styled-table a:hover {
+    color: #54ffe8;
+    text-decoration: underline;
+}
+
+/* Skills container styling */
+.skills-container {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Grid layout for skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+    gap: 40px; /* Space between skill sections */
+    padding: 0 20px; /* Padding around the grid */
+    text-align: left;
+}
+
+.skill-section {
+    margin-left: 60px; /* Remove any default margin to control layout */
+}
+
+/* Initially hide the skill content */
+.skill-content {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.skill-content.open {
+    display: block;
+    
+}
+
+.toggle-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #54ffe8;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.toggle-btn.open {
+    transform: rotate(45deg); /* Turns the plus into a minus */
+}
+
+.toggle-btn:hover {
+    color: #00c9b7; /* Change this to any color you prefer for the hover effect */
+}
+
+
+footer {
+    background-color: #141414;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #333;
+    flex-shrink: 0; /* Prevents footer from shrinking */
+}
+
+/* Container for the icons, center them horizontally */
+.footer-icons {
+    display: flex;
+    justify-content: center; /* Centers the icons */
+    gap: 20px; /* Adds space between the icons */
+    margin-bottom: 10px; /* Space between icons and footer text */
+}
+
+/* Styling for the individual icons */
+.footer-icons a {
+    display: inline-block;
+}
+
+.footer-icons img {
+    width: 40px; /* Adjust icon size */
+    height: 40px; /* Same as width for a square aspect ratio */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-icons img:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+}
+
+
+footer a {
+    color: #54ffe8;
+    text-decoration: none;
+    font-size: 10px; /* Adjust to your preferred size */
+}
+
+@media only screen and (max-width: 768px) {
+    header img {
+        margin-left: 20px; /* Adjust this value to control how far left the logo goes */
+    }
+
+    /* Hide the default menu on mobile */
+    header nav ul {
+        display: none;
+    }
+
+    /* Show the hamburger menu */
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* Show the mobile menu when clicked */
+    #navbar.active ul {
+        display: flex;
+        flex-direction: column;
+        background-color: #141414;
+        padding: 10px;
+        position: absolute;
+        width: 100%;
+        top: 80px; /* Adjust top based on your header size */
+        left: 0;
+        z-index: 100;
+    }
+
+    /* Menu items styling in the mobile dropdown */
+    #navbar.active ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    #navbar.active ul li a {
+        font-size: 24px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    #navbar.active ul li a:hover {
+        color: #54ffe8; /* Change color on hover */
+    }
+
+
+    .bio {
+        display: flex;
+        flex-direction: column; /* Stacks the items vertically */
+        align-items: center;     /* Centers the content horizontally */
+        text-align: center;      /* Centers the text */
+    }
+
+    .bio h2 {
+        order: 1;               /* Place the heading first */
+        margin: 20px 0;         /* Adds space around the heading */
+        font-size: clamp(24px, 5vw, 48px); /* Responsive heading size */
+    }
+
+    .bio img {
+        order: 2;               /* Place the image second */
+        margin: 20px 0;         /* Adds spacing around the image */
+        width: 200px;           /* Optional: Reduce the size of the image */
+        height: 200px;          /* Optional: Keep the image square */
+    }
+
+    .bio-content {
+        order: 3;               /* Place the remaining content third */
+        margin: 0;              /* Remove the right margin */
+        text-align: center;      /* Center-align the bio content text */
+        max-width: 90%;          /* Ensures the text doesn't stretch edge to edge */
+    }
+
+    .bio-content p {
+        margin: 0 auto;
+        font-size: 16px;        /* Reduce font size for smaller screens */
+    }
+
+    /* Grid container becomes 1 column for smaller screens */
+    .grid-container {
+        grid-template-columns: 1fr; /* Switch to 1 column for smaller screens */
+    }
+
+    /* Flexbox layout for .grid-item to control stacking order */
+    .grid-item {
+        display: flex;
+        flex-direction: column; /* Stack the title, image, text, and button vertically */
+        align-items: center; /* Center all content */
+        text-align: center; /* Center text */
+        padding: 20px 0; /* Add padding for spacing */
+        width: 100%; /* Full width for mobile */
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* One column on small screens */
+        gap: 0px; /* Space between skill sections */
+        padding: 0 0px; /* Padding around the grid */
+        text-align: left;
+        padding-right: 5px;
+        
+    }
+    .skill-section {
+        margin-left: 6px; /* Remove any default margin to control layout */
+    }
+
+    .skill-content ul li{
+        padding-right: 5px;
+        
+    }
+    .skill-content p{
+        font-size: 18px;
+    }
+    
+
+    /* Order of items inside the grid item */
+    .grid-text h3 {
+        order: 0; /* Ensure the title is first */
+        margin-bottom: 15px; /* Add space below the title */
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    .grid-image {
+        order: 0; /* Image second */
+        margin: 5px 0; /* Add space around the image */
+        width: 150px; /* Adjust image size */
+        height: 150px; /* Keep image square */
+        border-radius: 50%; /* Keep circular image */
+    }
+
+    .grid-text p {
+        order: 2; /* Text comes third */
+        font-size: 16px; /* Reduce text size for smaller screens */
+        margin: 10px 0; /* Add space around the text */
+    }
+
+    .btn {
+        order: 3; /* Button comes last */
+        margin-top: 20px; /* Add space between the text and the button */
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .ctf-intro p {
+        font-size: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+        
+    }
+
+    
+
+    /* Center the container and grid-section on mobile */
+    .container,
+    .grid-section {
+        margin: 0 auto; /* Centers the container */
+        max-width: 100%; /* Ensure full width */
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center; /* Center the text inside */
+    }
+
+    .contact-form-container {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center;      /* Center vertically */
+        
+    }
+
+    /* Left fields: Name and Email */
+    .left-fields {
+        display: flex;
+        flex-direction: column;
+        margin-right: 0px;
+    }
+
+    /* Right field: Message */
+    .right-field {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+    }
+    
+    .contact-form {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        flex-direction: column; /* Stack form fields vertically */
+        
+    }
+    .contact-form textarea{
+        padding: 0px;
+        padding-left: 0px !important;
+        width: 262px;
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center;      /* Center vertically */
+        
+        
+    }
+    
+
+    .submit-btn-container {
+        display: flex;
+        justify-content: center; /* Center the button horizontally */
+        align-items: center;      /* Center vertically */
+        text-align: center; /* Center the button */
+        margin-top: 20px;
+        grid-column: 1 ;
+        width: 100%;
+    }
+    
+}
+

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Portfolio of Martim Abreu</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+    <body>
+
+        <header>
+            <img src="images/logo.png" alt="Centered Image" class="centered-image">
+        
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                &#9776; <!-- Unicode for the hamburger icon (three stripes) -->
+            </div>
+        
+            <!-- Navigation Menu -->
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About me</a></li>
+                    <li><a href="ctf_challenges_choose.html">CTF Challenges</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="contact.html">Contact me</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+
+            <div class="container">
+                <section class="bio">
+                    <img src="images/profile.png" alt="Profile Picture" class="profile-image">      
+                    <div class="bio-content">
+                        <h2>I AM MARTIM ABREU</h2>
+                        <p>I am Martim Abreu, a cybersecurity enthusiast studying at Instituto Superior Técnico. 
+                            I have a passion for problem-solving and cybersecurity challenges. 
+                            Constantly learning new technologies, I aim to contribute to the security community and enhance my skills.
+                            I am driven by a curiosity to understand the intricacies of systems and networks.
+                            By participating in Capture The Flag (CTF) competitions, I develop critical thinking and technical skills.
+                            I enjoy collaborating with like-minded individuals to solve complex cybersecurity problems.
+                            My goal is to stay at the forefront of the ever-evolving field of cybersecurity while promoting best practices.
+                            </p>
+                </div>
+                </section>   
+            </div>
+
+            <div class="grid-section">
+                <div class="grid-container">
+                    <!-- About Section -->
+                    <div class="grid-item">
+                        <div class="grid-image zoom-out">
+                            <img src="images/about.png" alt="About" >
+                        </div>
+                        <div class="grid-text">
+                            <h3>ABOUT ME</h3>
+                            <p>Learn more about me, my journey in cybersecurity, and my passion for problem-solving.
+                            I have several experiences spanning across multiple domains.
+                            Join me in exploring the evolving world of cybersecurity as I continue to grow.</p>
+                            <a href="about.html" class="btn">Go to About</a>
+                        </div>
+                    </div>
+
+                    <!-- CTF Challenges Section -->
+                    <div class="grid-item">
+                        <img src="images/ctf.png" alt="CTF Challenges" class="grid-image">
+                        <div class="grid-text">
+                            <h3>CTF CHALLENGES</h3>
+                            <p>Explore the Capture The Flag (CTF) challenges I’ve solved, and the solutions provided.
+                                I regularly compete in CTF events to sharpen my skills.
+                                Discover how I approach and solve these complex problems. </p>
+                            <a href="ctf_challenges_choose.html" class="btn">Go to CTF Challenges</a>
+                        </div>
+                    </div>
+
+                    <!-- Skills Section -->
+                    <div class="grid-item">
+                        <div class="grid-image zoom-out">
+                            <img src="images/skills.png" alt="About">
+                        </div>
+                        <div class="grid-text">
+                            <h3>SKILLS</h3>
+                            <p>Discover the technical skills I’ve acquired through my experiences in cybersecurity.
+                                I am proficient in various security tools and technologies used in the field.
+                                Continuously improving my skills to stay ahead in the rapidly changing industry.
+                            </p>
+                            <a href="skills.html" class="btn">Go to Skills</a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Section -->
+                    <div class="grid-item">
+                        <div class="grid-image zoom-out">
+                            <img src="images/contact.png" alt="About">
+                        </div>
+                        <div class="grid-text">
+                            <h3>CONTACT ME</h3>
+                            <p>Get in touch with me through various platforms and channels.
+                                I am always open to new opportunities and collaborations.
+                                Let’s build something impactful together in the world of cybersecurity.
+                        </p>
+                            <a href="contact.html" class="btn">Go to Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+    <footer>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/martim-abreu-4b8a29225/" target="_blank">
+                <img src="images/linkedin.png" alt="LinkedIn" class="icon">
+            </a>
+            <a href="https://github.com/mmabreu2710" target="_blank">
+                <img src="images/github.png" alt="GitHub" class="icon">
+            </a>
+            <a href="images/Martim_Abreu.pdf" target="_blank">
+                <img src="images/cv.png" alt="cv" class="icon">
+            </a>
+        </div>
+        <a href="https://www.flaticon.com/free-icons/cybersecurity" title="cybersecurity icons">Cybersecurity icons created by Dewi Sari - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/anonymous" title="anonymous icons">Anonymous icons created by Dewi Sari - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/information" title="information icons">Information icons created by Tanah Basah - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/email" title="email icons">Email icons created by heisenberg_jr - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by riajulislam - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Roundicons Premium - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/curriculum-vitae" title="curriculum vitae icons">Curriculum vitae icons created by edt.im - Flaticon</a>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('active');
+        }
+    </script>
+
+    </body>
+</html>

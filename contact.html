@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Portfolio of Martim Abreu</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+    <body>
+
+        <header>
+            <img src="images/logo.png" alt="Centered Image" class="centered-image">
+        
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                &#9776; <!-- Unicode for the hamburger icon (three stripes) -->
+            </div>
+        
+            <!-- Navigation Menu -->
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About me</a></li>
+                    <li><a href="ctf_challenges_choose.html">CTF Challenges</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="contact.html">Contact me</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+        
+                <!-- Main Contact Section -->
+            <div class="contact-container">
+                <h2>Contact Me</h2>
+                <p>If you have any questions, opportunities, or would like to collaborate, feel free to contact me below.
+                    I will contact you as soon as possible.
+                </p>
+                
+                
+
+
+                <div class="contact-form-container">
+                    <form action="php/contact.php" method="POST" class="contact-form">
+                        <div class="left-fields">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                    
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    
+                        <div class="right-field">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                    
+                        <div class="submit-btn-container">
+                            <button type="submit" class="btn-submit">Send Message</button>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </main>
+    
+
+
+        <footer>
+            <div class="footer-icons">
+                <a href="https://www.linkedin.com/in/martim-abreu-4b8a29225/" target="_blank">
+                    <img src="images/linkedin.png" alt="LinkedIn" class="icon">
+                </a>
+                <a href="https://github.com/mmabreu2710" target="_blank">
+                    <img src="images/github.png" alt="GitHub" class="icon">
+                </a>
+                <a href="images/Martim_Abreu.pdf" target="_blank">
+                    <img src="images/cv.png" alt="cv" class="icon">
+                </a>
+            </div>
+            <a href="https://www.flaticon.com/free-icons/cybersecurity" title="cybersecurity icons">Cybersecurity icons created by Dewi Sari - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/anonymous" title="anonymous icons">Anonymous icons created by Dewi Sari - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/information" title="information icons">Information icons created by Tanah Basah - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/contact-us" title="contact us icons">Contact us icons created by Mr. GrayCat - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by riajulislam - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Roundicons Premium - Flaticon</a>
+        </footer>
+        <script>
+            function toggleMenu() {
+                const navbar = document.getElementById('navbar');
+                navbar.classList.toggle('active');
+            }
+        </script>
+
+    </body>
+</html>

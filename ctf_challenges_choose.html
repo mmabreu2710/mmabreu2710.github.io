@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Portfolio of Martim Abreu</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+    <body>
+
+        <header>
+            <img src="images/logo.png" alt="Centered Image" class="centered-image">
+        
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                &#9776; <!-- Unicode for the hamburger icon (three stripes) -->
+            </div>
+        
+            <!-- Navigation Menu -->
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About me</a></li>
+                    <li><a href="ctf_challenges_choose.html">CTF Challenges</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="contact.html">Contact me</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container">
+            <section class="ctf-intro">
+                <h1>CTF Challenges</h1>
+                <p>Welcome to my collection of solved Capture The Flag (CTF) challenges. Each challenge presented below belongs to a different category and tests various aspects of cybersecurity, ranging from web exploitation to reverse engineering. These challenges allowed me to develop and apply skills in real-world cybersecurity scenarios. Explore the categories below to see how I approached and solved these challenges, demonstrating my knowledge and techniques in tackling complex security problems.</p>
+            </section>
+        </div>
+
+        <div class="grid-section">
+            <div class="grid-container">
+                <!-- Web Exploitation Section -->
+                <div class="grid-item">
+                    <div class="grid-image zoom-out">
+                        <img src="images/web.png" alt="About" >
+                    </div>
+                    <div class="grid-text">
+                        <h3>WEB EXPLOITATION</h3>
+                        <p>In the Web Exploitation challenges, I have tackled vulnerabilities in various web applications. 
+                            These challenges involved exploiting issues like SQL injection, Cross-Site Scripting (XSS), and broken authentication mechanisms.
+                            Through my solutions, I demonstrate techniques to identify and exploit these vulnerabilities to gain unauthorized access or retrieve sensitive data.
+                            </p>
+                        <a href="solved_challenges_html/ctf_challenges_web_expoitation.html" class="btn">See Solved Challenges</a>
+                    </div>
+                </div>
+
+                 <!-- Forensics Section -->
+                 <div class="grid-item">
+                    <img src="images/forensic.png" alt="Contact" class="grid-image">
+                    <div class="grid-text">
+                        <h3>FORENSICS</h3>
+                        <p>In the Forensics challenges, I focused on extracting hidden information from files, disk images, or network traffic captures.
+                            These challenges involved analyzing file metadata, recovering deleted data, and extracting key information from complex formats.
+                            My solutions demonstrate the tools and techniques I used to uncover hidden or deleted evidence and solve the challenges.
+                        </p>
+                           
+                        <a href="solved_challenges_html/ctf_challenges_forensics.html" class="btn">See Solved Challenges</a>
+                    </div>
+                </div>
+    
+                <!-- Cryptography Section -->
+                <div class="grid-item">
+                    <div class="grid-image zoom-out">
+                        <img src="images/crypto.png" alt="Contact" >
+                    </div>
+                    <div class="grid-text">
+                        <h3>CRIPTOGRAPHY</h3>
+                        <p>In the Cryptography challenges, I solved problems involving encryption and decryption techniques.
+                            These challenges required knowledge of classic ciphers, modern encryption algorithms, and vulnerabilities in their implementations.
+                            My solutions involve decrypting ciphertext, identifying flaws in encryption schemes, and recovering sensitive data.
+                        </p>
+                        <a href="solved_challenges_html/ctf_challenges_cryptography.html" class="btn">See Solved Challenges</a>
+                    </div>
+                </div>
+    
+                <!-- REVERSE ENGINEERING Section -->
+                <div class="grid-item">
+                    <div class="grid-image zoom-out">
+                        <img src="images/reverse-engineering.png" alt="About">
+                    </div>
+                    <div class="grid-text">
+                        <h3>REVERSE ENGINEERING</h3>
+                        <p>In Reverse Engineering challenges, I worked on deconstructing and analyzing binaries to understand their functionality.
+                            These challenges involved disassembling code, finding hidden algorithms, and uncovering key data.
+                            My solutions showcase my skills in reversing code to reveal program logic and solve the given tasks.
+                        </p>
+                        <a href="solved_challenges_html/ctf_challenges_reverse_engineering.html" class="btn">See Solved Challenges</a>
+                    </div>
+                </div>
+    
+                <!-- Binary Exploitation Section -->
+                <div class="grid-item">
+                    <img src="images/binary.png" alt="Contact" class="grid-image">
+                    <div class="grid-text">
+                        <h3>BINARY EXPLOITATION</h3>
+                        <p>In Binary Exploitation challenges, I identified and exploited vulnerabilities in compiled programs.
+                            These challenges involved buffer overflows, format string vulnerabilities, and use-after-free exploits.
+                            My solutions demonstrate how to manipulate memory and registers to take control of vulnerable binaries.                  
+                        </p>
+                        <a href="solved_challenges_html/ctf_challenges_binary_exploitation.html" class="btn">See Solved Challenges</a>
+                    </div>
+                </div>
+
+                <!-- General Skills Section -->
+                <div class="grid-item">
+                    <div class="grid-image zoom-out">
+                        <img src="images/general.png" alt="Contact" >
+                    </div>
+                    <div class="grid-text">
+                        <h3>GENERAL SKILLS</h3>
+                        <p>General Skills challenges covered a wide range of basic to intermediate topics in cybersecurity.
+                            These included tasks like manipulating text files, working with basic scripts, and using common command-line tools.
+                            My solutions highlight problem-solving techniques and essential tools in my cybersecurity toolkit.
+                          </p>
+                        <a href="solved_challenges_html/ctf_challenges_general_skills.html" class="btn">See Solved Challenges</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <footer>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/martim-abreu-4b8a29225/" target="_blank">
+                <img src="images/linkedin.png" alt="LinkedIn" class="icon">
+            </a>
+            <a href="https://github.com/mmabreu2710" target="_blank">
+                <img src="images/github.png" alt="GitHub" class="icon">
+            </a>
+            <a href="images/Martim_Abreu.pdf" target="_blank">
+                <img src="images/cv.png" alt="cv" class="icon">
+            </a>
+        </div>
+        <a href="https://www.flaticon.com/free-icons/website" title="website icons">Website icons created by Freepik - Flaticon</a> 
+        <a href="https://www.flaticon.com/free-icons/forensics" title="forensics icons">Forensics icons created by IYIKON - Flaticon</a> 
+        <a href="https://www.flaticon.com/free-icons/cryptography" title="cryptography icons">Cryptography icons created by juicy_fish - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/rebuild" title="rebuild icons">Rebuild icons created by orvipixel - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/debugging" title="debugging icons">Debugging icons created by Rooman12 - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/code" title="code icons">Code icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/cyber-attack" title="cyber attack icons">Cyber attack icons created by Smashicons - Flaticon</a>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('active');
+        }
+    </script>
+
+    </body>
+</html>
